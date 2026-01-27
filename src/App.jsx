@@ -281,9 +281,7 @@ export default function BedrockFinder() {
     
     // Criar 4 workers para busca paralela
     const workerUrl = edition === 'java' 
-
   ? createJavaWorker() 
-
   : createBedrockWorker();
     const workers = [];
     let foundResult = false;
