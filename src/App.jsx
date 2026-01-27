@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Map, Search, RotateCcw, Download, Copy, CheckCircle2, AlertTriangle, Cpu } from 'lucide-react';
+import { createBedrockWorker } from './engines/BedrockEngine';
+import { createJavaWorker } from './engines/JavaEngine';
 
 export default function BedrockFinder() {
   const [gridSize, setGridSize] = useState(5);
@@ -278,6 +280,11 @@ export default function BedrockFinder() {
     const workerUrl = URL.createObjectURL(blob);
     
     // Criar 4 workers para busca paralela
+    const workerUrl = edition === 'java' 
+
+  ? createJavaWorker() 
+
+  : createBedrockWorker();
     const workers = [];
     let foundResult = false;
     let completedWorkers = 0;
@@ -359,6 +366,8 @@ export default function BedrockFinder() {
       setTimeout(() => setCopied(false), 2000);
     }
   };
+  const [edition, setEdition] = useState('bedrock'); // ou 'java'
+
 
   const exportPattern = () => {
     const pattern = grid.map(row => row.map(cell => cell ? '1' : '0').join('')).join('\n');
