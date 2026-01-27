@@ -27,4 +27,4 @@ Uma ferramenta técnica avançada para localizar coordenadas no Minecraft Java E
 - **Ícones:** Lucide-react.
 
 ---
-Developed with 💜 by **Masterotaku**
+Developed with 💜 by **Masterotaku**.
