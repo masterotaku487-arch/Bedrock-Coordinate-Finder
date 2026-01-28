@@ -721,11 +721,14 @@ export default function App() {
                     Calculando (4 Cores)...
                   </>
                 ) : (
-                  <>
+                <>
                     <Search className="w-5 h-5" />
                     Calcular Localização
-</>
-)}
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
 
 
 
