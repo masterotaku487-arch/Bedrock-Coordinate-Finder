@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bedrock-coordinate-finder.vercel.app/sitemap.xml
